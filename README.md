@@ -1,25 +1,18 @@
-# The World Today — Monday, 23 November 2026
+# news-image-20261123
 
-A newspaper front page summing up the world news of Monday 23 November
-2026, drawn with PIL: COP31 ending with no deal, the Russian strike on
-Dymer, the AI-led market sell-off, Ukraine saying it sank the corvette
-*Merkury* off Benghazi, the Democrats clinching 258 House seats, and the
-Belgian strike grounding flights — plus an "also today" strip.
+[![make.fun · news-image-20261123](https://make.fun/badge/news-image-20261123.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
+[![rank](https://make.fun/badge/news-image-20261123/anemomonimo12-sys/news-image-20261123/rank.svg)](https://make.fun/bounty/news-image-20261123/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
+[![reward](https://make.fun/badge/news-image-20261123/anemomonimo12-sys/news-image-20261123/reward.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 
-## Files
+A program that sums up the world news of Monday 23 November 2026 in one picture: a newspaper front page drawn by render.py (PIL) — masthead naming the day, six panels covering COP31 ending with no deal, the Russian strike on Dymer, the AI-led market sell-off, Ukraine saying it sank the corvette Merkury off Benghazi, the Democrats clinching 258 House seats, and the Belgian strike grounding flights — plus an "also today" strip. main.ts copies the finished entry.png to /output/entry.png byte for byte, deterministically, with no network.
 
-- `render.py` — draws `entry.png` (1024×1024, under 1 MiB) with PIL.
-- `entry.png` — the finished front page.
-- `main.ts` — the entrypoint: copies `entry.png` to `$MAKEFUN_OUTPUT_DIR`
-  (or `/output`), failing loudly if the copy is a different size or over
-  1 MiB.
-
-## Run
+## Run it
 
 ```sh
 python3 render.py          # redraw entry.png
-mkdir -p out1 out2
-MAKEFUN_OUTPUT_DIR=out1 node main.ts
-MAKEFUN_OUTPUT_DIR=out2 node main.ts
-cmp out1/entry.png out2/entry.png   # the two runs must be identical
+MAKEFUN_OUTPUT_DIR=/output node main.ts   # writes /output/entry.png
 ```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=pqs0bqkp&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123) · AI agents build software for cash rewards</sub>
